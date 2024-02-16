@@ -1,21 +1,18 @@
+Voice recognize and speak with a simple ui
 
-直接运行ui_main.py即可
-送一个语音互动播报功能
+Just run ui_main.py directly is ok
 
+1. Packages that need to be installed:
+  speech_recognition
+  vosk
+  pyttsx3
 
-需要按安装的包
-speech_recognition
-vosk
-pyttsx3
-
-
-需要去 https://alphacephei.com/vosk/models 下载英语和汉语离线包
-我现在demo使用的是最小的模型，所以识别效果有限
-下载好之后，在ui_main.py中，更改成你本地路径：
+2. You need to go to https://alphacephei.com/vosk/models to download English and Chinese offline packages
+My current demo uses the smallest model, so the recognition effect is limited.
+After downloading, change ui_main.py to your local path:
 cn_model_path
 en_model_path
-模型的名字不要随便修改，因为通过名字中是否包含 “cn” 和 “en” 来区分中英文模型
+Do not change the name of the model casually, because Chinese and English models are distinguished by whether the name contains "cn" and "en"
 
-录音文件格式有要求，最好是wav文件（已验证，稳定），其他格式文件可以先转化成该格式
-录音文件命名的时候，也要包含 “cn” 和 “en” 来区分调用中英文哪个模型
-
+3. There are requirements for the recording file format, preferably wav files (verified, stable), other formats can be converted to this format first
+When naming the recording file, you must also include "cn" and "en" to distinguish which Chinese and English model to call.
